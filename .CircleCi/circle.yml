@@ -7,3 +7,7 @@ jobs:
    - checkout
    - run: echo "First hello circleci."
    - run: node -v
+
+test:
+  override:
+    - docker bhntools/debcirclnode:latest node -v
