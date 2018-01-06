@@ -1,0 +1,9 @@
+version: 2
+jobs:
+ build:
+  docker:
+   - image: 
+  steps:
+   - checkout
+   - run: echo "First hello circleci."
+   - run: node -v
