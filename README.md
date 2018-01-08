@@ -1,9 +1,8 @@
 # Docker-CircleCi-Node-Angular
 --------------------------------------
    
-    [![Build Status](https://travis-ci.org/NajlaBH/debcirclnodeG.svg?branch=master)](https://travis-ci.org/NajlaBH/debcirclnodeG)
+  [![Build Status](https://travis-ci.org/NajlaBH/debcirclnodeG.svg?branch=master)](https://travis-ci.org/NajlaBH/debcirclnodeG)
 
-# --------------------------------------
 
 
 Docker images for angular cli app.
