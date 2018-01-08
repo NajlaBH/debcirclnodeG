@@ -15,8 +15,8 @@ before_script:
 before_install:
     - docker pull carlad/sinatra
     - docker run -d -p 127.0.0.1:80:4567 carlad/sinatra /bin/sh -c "cd /root/sinatra; bundle exec foreman start;"
-    - docker build --build-arg DISPLAY=$ip:0  -p 4200:4200 -t bhntools/debcirclnode:latest .
+    - docker build --build-arg DISPLAY=$ip:0 -t bhntools/debcirclnode:latest .
     - docker run carlad/sinatra /bin/sh -c "cd /root/sinatra; bundle exec rake test"
 
 script:
-- docker run --name nodangl -p 4200:4200 -rmi -t bhntools/debcirclnode:latest
+- docker run -d -p 4200:4200 -e DISPLAY=$ip:0  -it bhntools/debcirclnode:latest
