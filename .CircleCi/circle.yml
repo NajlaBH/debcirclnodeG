@@ -1,20 +1,13 @@
-machine:
- service:
-  - docker
-
-dependencies:
- override:
-  - docker info
-  - docker build --rm=false -t bhntools/debcirclnode:latest
+version: 2
+jobs:
+ build:
+  docker:
+   - image: bhntools/debcirclnode:latest
+  steps:
+   - checkout
+   - run: echo "First hello circleci."
+   - run: node -v
 
 test:
- override:
-  - docker run -d --name nodangl -p 4200:4200  bhntools/debcirclnode:latest sleep 10
-  - curl --retry 10 --retry-delay 5 -v http://localhost:4200
-
-deployment:
- hub:
-  branch: master
-  commands:
-   - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-   - ./deploy.sh
+  override:
+    - "docker bhntools/debcirclnode:latest node -v"
