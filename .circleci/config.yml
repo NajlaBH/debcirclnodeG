@@ -7,7 +7,7 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-            - "94:76:ff:b0:3c:13:62:8a:9a:a3:e2:1f:e1:5f:18:f6"
+            - "30:d2:4a:a6:86:3b:45:25:94:8f:5d:3f:db:b0:7e:9c"
       - run: echo "First hello debcirclnode."
       - run: node -v
 test:
