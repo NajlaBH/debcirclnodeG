@@ -1,13 +1,9 @@
 # Docker-CircleCi-Node-Angular
 --------------------------------------
-   
-    [![Build Status](https://travis-ci.org/NajlaBH/debcirclnodeG.svg?branch=master)](https://travis-ci.org/NajlaBH/debcirclnodeG)
-
-# --------------------------------------
-
 
 Docker images for angular cli app.
 
+[![Build Status](https://travis-ci.org/NajlaBH/debcirclnodeG.svg?branch=master)](https://travis-ci.org/NajlaBH/debcirclnodeG)
 
 
 
@@ -21,7 +17,8 @@ Docker images for angular cli app.
 ## Usage
 ==========
 
-docker pull bhntools/debcirclnode:latest
+docker pull bhntools/circlenode:latest
+
 
 
 ## Authors & Maintainer
