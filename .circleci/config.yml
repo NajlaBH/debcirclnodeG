@@ -4,10 +4,10 @@ jobs:
     docker:
       - image: bhntools/debcirclnode:latest
     steps:
-      - checkout
       - add_ssh_keys:
           fingerprints:
             - "30:d2:4a:a6:86:3b:45:25:94:8f:5d:3f:db:b0:7e:9c"
+      - checkout
       - run: echo "First hello debcirclnode."
       - run: node -v
 test:
