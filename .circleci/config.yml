@@ -5,6 +5,10 @@ jobs:
       - image: bhntools/debcirclnode:latest
     steps:
       - checkout
+      - add_ssh_keys:
+        fingerprints:
+        - "94:76:ff:b0:3c:13:62:8a:9a:a3:e2:1f:e1:5f:18:f6"
+
       - run: echo "First hello debcirclnode."
       - run: node -v
 test:
