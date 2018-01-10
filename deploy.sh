@@ -1,7 +1,7 @@
 #!/bin/bash
 docker push bhntools/debcirclnode:latest
 
-ssh deploy@8.218.102.129 << EOF
+ssh deploy@192.30.253.113 << EOF
 docker pull bhntools/debcirclnode:latest
 docker stop web || true
 docker rm web || true
