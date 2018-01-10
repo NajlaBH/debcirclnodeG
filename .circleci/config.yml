@@ -4,6 +4,9 @@ jobs:
     docker:
       - image: bhntools/debcirclnode:latest
     steps:
+      - run:
+          name: Avoid hosts unknown for github
+          command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
       - add_ssh_keys:
           fingerprints:
             - "94:76:ff:b0:3c:13:62:8a:9a:a3:e2:1f:e1:5f:18:f6"
